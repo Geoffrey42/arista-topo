@@ -1,0 +1,27 @@
+
+> show running
+! Command: show running-config at line 1
+! device: localhost (cEOSLab, EOS-4.23.1F)
+!
+transceiver qsfp default-mode 4x10G
+!
+agent PowerManager shutdown
+agent LedPolicy shutdown
+agent Thermostat shutdown
+agent PowerFuse shutdown
+agent StandbyCpld shutdown
+agent LicenseManager shutdown
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+interface Ethernet1
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+no ip routing
+!
+end
