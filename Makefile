@@ -18,4 +18,4 @@ ps:
 	docker ps | grep $(PREFIX)
 
 stats:
-	docker stats $(LEAF) $(SPINE) $(HOST)
+	docker stats --no-stream $(LEAF) $(SPINE) $(HOST)
