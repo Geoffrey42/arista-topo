@@ -8,6 +8,8 @@ SPINE=$(PREFIX)Spine-1 $(PREFIX)Spine-2
 
 HOST=$(PREFIX)Host-1 $(PREFIX)Host-2 $(PREFIX)Host-3
 
+NET=$(PREFIX)net-0
+
 create:
 	docker-topo --create $(TOPO)
 
@@ -19,3 +21,6 @@ ps:
 
 stats:
 	docker stats --no-stream $(LEAF) $(SPINE) $(HOST)
+
+net:
+	docker network inspect $(NET)
